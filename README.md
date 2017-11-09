@@ -1,18 +1,3 @@
-p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Helvetica}
-li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-li.li4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #000000}
-li.li5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #000000; background-color: #ffffff}
-span.s1 {text-decoration: underline}
-span.s2 {font: 12.0px Helvetica; color: #000000}
-span.s3 {font-kerning: none; background-color: #ffffff}
-span.s4 {font-kerning: none}
-span.s5 {background-color: #ffffff}
-span.s6 {font: 12.0px 'PingFang SC'}
-ol.ol1 {list-style-type: decimal}
-ul.ul1 {list-style-type: disc}
-ul.ul2 {list-style-type: hyphen}
 
 # Big Data Fusion to Estimate Urban Fuel Consumption:
 ###  A case study of Riyadh
@@ -85,85 +70,47 @@ TP_trip class is initialized by passing the following inputs in order — reflec
 To install requirements run the following command in the shell from the directory of the repository once downloaded: pip install -r requirements.txt 
 
 tree
-
 .
-
 ├── Creating\ Trip\ Dict.ipynb
-
 ├── Figure_3_Ramadan-Trip_rate.ipynb
-
 ├── Figure_4_Data_Verification.ipynb
-
 ├── Figure_5_FC_visualization.ipynb
-
 ├── Figure_6_Targeted_Reduction.ipynb
-
 ├── Flowchart.pdf
-
 ├── Fuelconsumption.py
-
+├── README.md
 ├── Streetsmart_Calibration_\ Figure2
-
 │   ├── Fig_2_a.m
-
 │   ├── Fig_2_b.m
-
 │   ├── Fig_2_c.m
-
+│   ├── README.md
 │   └── data
-
-│       ├── FEandprofile.mat
-
-│       ├── Fuelec2.mat
-
-│       ├── UKandPoTRACCS2010.mat
-
-│       ├── krange_counts.mat
-
-│       └── vehiclesmatchedRanges.mat
-
+│       ├── FEandprofile.mat
+│       ├── Fuelec2.mat
+│       ├── UKandPoTRACCS2010.mat
+│       ├── krange_counts.mat
+│       └── vehiclesmatchedRanges.mat
 ├── TPtrip.py
-
 ├── TPtrip.pyc
-
 ├── data
-
 │   ├── Alltrips_Github.pkl
-
 │   ├── DataFrame0_1_100pc_.csv
-
 │   ├── Riyadh_network_local.pkl
-
 │   ├── Riyadh_streets_FC_Figure3_alltimes.pkl
-
 │   ├── Riyadh_streets_FCcalculated_time1_targeted_reduction.pkl
-
 │   ├── Riyadh_trips_timestamps.csv
-
 │   ├── Trips_time1_100_github.pkl
-
 │   ├── flow_byEdge_time1.csv
-
 │   ├── flow_byEdge_time2.csv
-
 │   ├── flow_byEdge_time3_midday.csv
-
 │   ├── matchedSegmentsbyEdge_time1_8_9AM_weekdays_github.pkl
-
 │   ├── mx_Riyadh_streets_TAZ_ODs_0_1.pkl
-
 │   ├── riyadh_route_edges_am.txt
-
 │   └── streets_withtimes.pkl
-
 ├── fuel_calc.py
-
 ├── fuel_calc.pyc
-
 ├── readcleansave_trips.py
-
 ├── staycode.py
-
 ├── staycode.pyc
 
-└── tree.txt
+
