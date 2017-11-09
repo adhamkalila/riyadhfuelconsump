@@ -50,7 +50,8 @@ Each iPython Notebook script recreates a Figure of the paper. 
 
 - **TPtrip.py** : contains functions written for the class TP_trip for the analysis of GPS points and 
 - **fuel_calc.py**: contains functions to calculate trips metrics for fuel consumption calculation using the Streetsmart model.
-
+- **staycode.py** : contains code to identify stays (periods of stationary points that can be used to identify the end of one trip and the start of another.) - written by Riccardo Di-Clemente
+- **metro** : folder from the multiplex analysis by Phil Chodrow and Zeyad Awwad containing modules for the trip dictionary analysis. copied from https://github.com/PhilChodrow/riyadh_multiplex
 TP_trip class is initialized by passing the following inputs in order — reflects the data used for the experiment: required fields have an asterix * other fields can be filled with an empty string.
 
 1. TripID* - unique trip identification number
