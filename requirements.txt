@@ -1,0 +1,13 @@
+pysal
+matplotlib
+bumpy
+networkx
+numpy
+pandas
+datetime 
+scipy
+community
+folium
+seaborn
+python-igraph==0.7.1.post6
+joblib
