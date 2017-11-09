@@ -1,0 +1,261 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset134 PingFangSC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\})}{\leveltext\leveltemplateid301\'02\'00);}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww16220\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 README in main Directory of Repository\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs28 \cf0 \ul \ulc0 Purpose:
+\b0\fs24 \ulnone \
+This repo contains the code that will enable the recreation of the research conducted at MIT in 2017 pertaining to fuel consumption estimation by combining different sources of big data. The original code scripts used were split between MATLAB (or Oracle) and Python.The purpose of the published framework is to showcase and share the methods and scripts used to calibrate the model, verify its outputs, and utilize it to test policy implementations that affect fuel consumption. The current application is on the city of Riyadh, Saudi Arabia. \
+\
+Use: The Streetsmart Calibration Folder contains MATLAB/Octave code showing the calibration of the Streestmart model as well as the creation of Figure 2 of the paper. Other scripts included demonstrate the use of the code to recreate the analysis described in the paper. A summary of the data and scripts follows.\
+\
+For a picture of how the code fits together, not including the calibration folder, please see the attached flowchart PDF titled \'91Flowchart.pdf\'92 in the main directory of the repository. \
+\
+
+\b\fs28 \ul Data
+\b0\fs24 \ulnone \
+This folder contains the data used in the analysis, altered to remove any sensitive data we do cannot share publicly. It still contains enough of the outputs to recreate the figures of the paper.\
+\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\'95	}
+\b flow_byEdge_time#
+\b0 .csv : a CSV with flows in cars/period for the different time windows. the conversion to cars/hour occurs in the scripts. It depends on the \'91calles method\'92 applied to create the flows. (cite calles paper here) \
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+TimeWindows: \
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls1\ilvl2\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+time 1: Weekdays 8-9 AM \
+\ls1\ilvl2\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+time 2: Weekdays 5 - 6 PM \
+\ls1\ilvl2\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+time 3: Weekdays 12 - 1 PM
+\f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\'95	}
+\b Riyadh_trips_timestamps.csv
+\b0  : a list of the times that trips are initiated for the analysis of the hour by hour trips distributions in Figure 3\
+\pard\tx940\tx1440\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}The 2 columns are\
+\pard\tx1660\tx2160\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li2160\fi-2160\pardirnatural\partightenfactor0
+\ls1\ilvl2\cf0 {\listtext	\uc0\u8259 	}day: the day the trip was initiated\
+{\listtext	\uc0\u8259 	}The Timestamp of the trip\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	\'95	}
+\b Alltrips_Github.pkl 
+\b0 : a pickled output of a list of all the trips from the dataset made specifically for this repository. The original data, which came in CSV form, is a list of taxi trips made by a local Saudi Arabian ride-hail taxi service. The pickle contains the speed profiles of the trips which are used to calculate fuel consumption with the Streetsmart model. It is a list of instances of the class TP_trip filtered to remove trips not made in Riyadh and those with a GPS frequency greater than 15 s. Details on how it is produced from the original CSV data is in the python script \'91readcleansave_trips.py\'92 in the main directory. \
+{\listtext	\'95	}
+\b Riyadh_network_local.pkl 
+\b0 : a pickle of the street network in a graph format\
+{\listtext	\'95	}
+\b Riyadh_streets_FC_Figure3_alltimes.pkl
+\b0  : a pickle of the street network of Riyadh in a graph format with Fuel consumption for each streets/edge for all 3 time windows as an attribute. \
+{\listtext	\'95	}
+\b DataFrame0_1_100pc.csv
+\b0  : results of the iterative traffic assignment of Origin Destination flows for time 1 (from {\field{\*\fldinst{HYPERLINK "https://github.com/PhilChodrow/riyadh_multiplex"}}{\fldrslt https://github.com/PhilChodrow/riyadh_multiplex}})\
+{\listtext	\'95	}
+\b mathcedsegemtns_byEdge_time1_8_9AM_weekdays_github.pkl
+\b0  : pickled output of the map matching results reorganized into a dictionary with keys: edge of street network, values : all movement segments matched to that edge from the taxi GPS routes. \
+{\listtext	\'95	}
+\b mx_Riyadh_streets_TAZ_ODs_0_1.pkl 
+\b0 : pickle of multiplex graph with streets and Traffic Analysis Zones (TAZ) and ODs of time 1 loaded. \
+{\listtext	\'95	}
+\b Riyadh_streets_FC_calcualted_time1_taregeted_reduction.pkl 
+\b0 : pickle of Riyadh street network with FC of time 1 for each edge clacilauted and saved as an attributed. needed for Figure 6 trip fuel consumption calculation. \
+{\listtext	\'95	}
+\b streets_withtimes.pkl
+\b0  :  pickle of Riyadh Street network with attributes of free flow times per edge\
+{\listtext	\'95	}
+\b Trips_time1_100_github.pkl
+\b0  : pickle of the dictionary of simulated trips for each OD of time 1 with FC calculated. Sample of output needed for Figure 6\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\b\fs28 \cf0 \ul \ulc0 Scripts
+\b0\fs24 \ulnone \
+Each iPython Notebook script recreates a Figure of the paper. \
+\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\b \cf0 {\listtext	\'95	}Figure_3_Ramadan Trip creation rate.ipynb 
+\b0 : Shows the method used to create the average hourly rates figure showing Ramadan, Non-Ramadan, and combined taxi trips throughout 2015 and 2016 in Riyadh.\
+{\listtext	\'95	}
+\b Figure_4_Data Verification.ipynb
+\b0  : Shows the method used to create the Data Verification figures using trips in the morning peak time period of weekdays from 8 - 9 AM. (a) Histogram of Reported and calculated Trip Distances. (b) Histogram of free flow travel time and Observed travel time in matched trips. (c) Histogram of Fuel economies using constant speed, speed profiles, and 1 bin and all bins.\
+{\listtext	\'95	}
+\b Figure_5_FC_visualization.ipynb
+\b0  : Shows the method used to create the Choropleth Maps of fuel consumption rates [Liter/meter.hour] by the StreetSmart model on streets matched with GPS data for typical time periods\
+{\listtext	\'95	}
+\b Figure_6
+\b0 \
+{\listtext	\'95	}
+\b readcleansave_trips.py
+\b0  : This script takes trip GPS data as csv, cleans it and saves it as an instance of the TP_trip class\
+{\listtext	\'95	}
+\b Fuelconsumption.py
+\b0  : This script calculates fuel consumption estimates for time 1 as an example of the method. It takes as input the cleaned trips instances, Road Network graph, and map matching results and outputs the street network with fuel consumption estimates as attributes of each edge. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+
+\b\fs28 \ul Utility
+\b0\fs24 \ulnone \
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 {\listtext	\'95	}
+\b TPtrip.py
+\b0  : contains functions written for the class TP_trip for the analysis of GPS points and \
+{\listtext	\'95	}
+\b fuel_calc.py 
+\b0 : contains functions to calculate trips metrics for fuel consumption calculation using the Streetsmart model. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+TP_trip class is initialized by passing the following inputs in order \'97 reflects the data used for the experiment: required fields have an asterix * other fields can be filled with an empty string.\
+\pard\tx220\tx720\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li720\fi-720\pardirnatural\partightenfactor0
+\ls4\ilvl0\cf0 {\listtext	1)	}TripID* - unique trip identification number\
+{\listtext	2)	}User_Gender\
+{\listtext	3)	}CreateTime\
+{\listtext	4)	}PickUp_Location* - coordinates in a tuple \
+{\listtext	5)	}PickUp_Time* - timestamps in date time format of start of trip\
+{\listtext	6)	}Dropoff_Location* - coordinates in a tuple \
+{\listtext	7)	}Dropoff_Time* - timestamps in date time format of end of trip\
+{\listtext	8)	}Cost_Trip\
+{\listtext	9)	}Car_Category\
+{\listtext	10)	}Car_Model\
+{\listtext	11)	}Distance_KM* - distance traveled in [km]\
+{\listtext	12)	}Duration_Sec* \
+{\listtext	13)	}Route_String* List of GPS points followed by car without a timestamp but evenly distributed over trip. code assumes the GPS recording frequency is stable and constant. \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+To install requirements run the following command in the shell from the directory of the repository once downloaded: pip install -r requirements.txt \
+\
+tree\
+.\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Creating\\ Trip\\ Dict.ipynb\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Figure_3_Ramadan-Trip_rate.ipynb\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Figure_4_Data_Verification.ipynb\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Figure_5_FC_visualization.ipynb\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Figure_6_Targeted_Reduction.ipynb\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Flowchart.pdf\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Fuelconsumption.py\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Streetsmart_Calibration_\\ Figure2\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Fig_2_a.m\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Fig_2_b.m\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Fig_2_c.m\
+\uc0\u9474 \'a0\'a0 \u9492 \u9472 \u9472  data\
+\uc0\u9474 \'a0\'a0     
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  FEandprofile.mat\
+\uc0\u9474 \'a0\'a0     
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Fuelec2.mat\
+\uc0\u9474 \'a0\'a0     
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  UKandPoTRACCS2010.mat\
+\uc0\u9474 \'a0\'a0     
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  krange_counts.mat\
+\uc0\u9474 \'a0\'a0     \u9492 \u9472 \u9472  vehiclesmatchedRanges.mat\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  TPtrip.py\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  TPtrip.pyc\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  data\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Alltrips_Github.pkl\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  DataFrame0_1_100pc_.csv\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Riyadh_network_local.pkl\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Riyadh_streets_FC_Figure3_alltimes.pkl\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Riyadh_streets_FCcalculated_time1_targeted_reduction.pkl\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Riyadh_trips_timestamps.csv\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  Trips_time1_100_github.pkl\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  flow_byEdge_time1.csv\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  flow_byEdge_time2.csv\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  flow_byEdge_time3_midday.csv\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  matchedSegmentsbyEdge_time1_8_9AM_weekdays_github.pkl\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  mx_Riyadh_streets_TAZ_ODs_0_1.pkl\
+\uc0\u9474 \'a0\'a0 
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  riyadh_route_edges_am.txt\
+\uc0\u9474 \'a0\'a0 \u9492 \u9472 \u9472  streets_withtimes.pkl\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  fuel_calc.py\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  fuel_calc.pyc\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  readcleansave_trips.py\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  staycode.py\
+
+\f2 \'a9\'c0
+\f0 \uc0\u9472 \u9472  staycode.pyc\
+\uc0\u9492 \u9472 \u9472  tree.txt\
+\
+}
