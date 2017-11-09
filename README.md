@@ -11,8 +11,8 @@ Use: The Streetsmart Calibration Folder contains MATLAB/Octave code showing the 
 For a picture of how the code fits together, not including the calibration folder, please see the attached flowchart PDF titled ‘Flowchart.pdf’ in the main directory of the repository. 
 
 ## **Data**
-
-This folder contains the data used in the analysis, altered to remove any sensitive data we do cannot share publicly. It still contains enough of the outputs to recreate the figures of the paper.
+It is currently zipped (at 1 Gb) but once uncmpressed it wiill reach 4.5 Gb. To recreate the figures using the data, the data folder must be downloaded and unzipped and placed in the same folder as the scripts.
+It the data used in the analysis, altered to remove any sensitive data we cannot share publicly. It still contains enough of the outputs to recreate the figures of the paper.
 
 - **flow_byEdge_time#**.csv : a CSV with flows in cars/period for the different time windows. the conversion to cars/hour occurs in the scripts. It depends on the ‘calles method’ applied to create the flows. (cite calles paper here) 
     - TimeWindows: 
