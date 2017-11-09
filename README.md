@@ -25,12 +25,12 @@ It the data used in the analysis, altered to remove any sensitive data we cannot
         - day: the day the trip was initiated
         - The Timestamp of the trip
 
-- **Alltrips_Github.pkl **: a pickled output of a list of all the trips from the dataset made specifically for this repository. The original data, which came in CSV form, is a list of taxi trips made by a local Saudi Arabian ride-hail taxi service. The pickle contains the speed profiles of the trips which are used to calculate fuel consumption with the Streetsmart model. It is a list of instances of the class TP_trip filtered to remove trips not made in Riyadh and those with a GPS frequency greater than 15 s. Details on how it is produced from the original CSV data is in the python script ‘readcleansave_trips.py’ in the main directory. 
+- **Alltrips_Github.pkl**: a pickled output of a list of all the trips from the dataset made specifically for this repository. The original data, which came in CSV form, is a list of taxi trips made by a local Saudi Arabian ride-hail taxi service. The pickle contains the speed profiles of the trips which are used to calculate fuel consumption with the Streetsmart model. It is a list of instances of the class TP_trip filtered to remove trips not made in Riyadh and those with a GPS frequency greater than 15 s. Details on how it is produced from the original CSV data is in the python script ‘readcleansave_trips.py’ in the main directory.
 - **Riyadh_network_local.pkl **: a pickle of the street network in a graph format
 - **Riyadh_streets_FC_Figure3_alltimes.pkl** : a pickle of the street network of Riyadh in a graph format with Fuel consumption for each streets/edge for all 3 time windows as an attribute. 
 - **DataFrame0_1_100pc.csv** : results of the iterative traffic assignment of Origin Destination flows for time 1 (from [https://github.com/PhilChodrow/riyadh_multiplex](https://github.com/PhilChodrow/riyadh_multiplex))
 - **mathcedsegemtns_byEdge_time1_8_9AM_weekdays_github.pkl** : pickled output of the map matching results reorganized into a dictionary with keys: edge of street network, values : all movement segments matched to that edge from the taxi GPS routes. 
-- **mx_Riyadh_streets_TAZ_ODs_0_1.pkl **: pickle of multiplex graph with streets and Traffic Analysis Zones (TAZ) and ODs of time 1 loaded. 
+- **mx_Riyadh_streets_TAZ_ODs_0_1.pkl**: pickle of multiplex graph with streets and Traffic Analysis Zones (TAZ) and ODs of time 1 loaded.
 - **Riyadh_streets_FC_calcualted_time1_taregeted_reduction.pkl **: pickle of Riyadh street network with FC of time 1 for each edge clacilauted and saved as an attributed. needed for Figure 6 trip fuel consumption calculation. 
 - **streets_withtimes.pkl** :  pickle of Riyadh Street network with attributes of free flow times per edge
 - **Trips_time1_100_github.pkl** : pickle of the dictionary of simulated trips for each OD of time 1 with FC calculated. Sample of output needed for Figure 6
@@ -39,7 +39,7 @@ It the data used in the analysis, altered to remove any sensitive data we cannot
 
 Each iPython Notebook script recreates a Figure of the paper. 
 
-- **Figure_3_Ramadan Trip creation rate.ipynb **: Shows the method used to create the average hourly rates figure showing Ramadan, Non-Ramadan, and combined taxi trips throughout 2015 and 2016 in Riyadh.
+- **Figure_3_Ramadan Trip creation rate.ipynb**: Shows the method used to create the average hourly rates figure showing Ramadan, Non-Ramadan, and combined taxi trips throughout 2015 and 2016 in Riyadh.
 - **Figure_4_Data Verification.ipynb** : Shows the method used to create the Data Verification figures using trips in the morning peak time period of weekdays from 8 - 9 AM. (a) Histogram of Reported and calculated Trip Distances. (b) Histogram of free flow travel time and Observed travel time in matched trips. (c) Histogram of Fuel economies using constant speed, speed profiles, and 1 bin and all bins.
 - **Figure_5_FC_visualization.ipynb** : Shows the method used to create the Choropleth Maps of fuel consumption rates [Liter/meter.hour] by the StreetSmart model on streets matched with GPS data for typical time periods
 - **Figure_6**
@@ -49,7 +49,7 @@ Each iPython Notebook script recreates a Figure of the paper. 
 ## **Utility**
 
 - **TPtrip.py** : contains functions written for the class TP_trip for the analysis of GPS points and 
-- **fuel_calc.py **: contains functions to calculate trips metrics for fuel consumption calculation using the Streetsmart model. 
+- **fuel_calc.py**: contains functions to calculate trips metrics for fuel consumption calculation using the Streetsmart model.
 
 TP_trip class is initialized by passing the following inputs in order — reflects the data used for the experiment: required fields have an asterix * other fields can be filled with an empty string.
 
@@ -68,49 +68,3 @@ TP_trip class is initialized by passing the following inputs in order — reflec
 13. Route_String* List of GPS points followed by car without a timestamp but evenly distributed over trip. code assumes the GPS recording frequency is stable and constant. 
 
 To install requirements run the following command in the shell from the directory of the repository once downloaded: pip install -r requirements.txt 
-
-tree
-.
-├── Creating\ Trip\ Dict.ipynb
-├── Figure_3_Ramadan-Trip_rate.ipynb
-├── Figure_4_Data_Verification.ipynb
-├── Figure_5_FC_visualization.ipynb
-├── Figure_6_Targeted_Reduction.ipynb
-├── Flowchart.pdf
-├── Fuelconsumption.py
-├── README.md
-├── Streetsmart_Calibration_\ Figure2
-│   ├── Fig_2_a.m
-│   ├── Fig_2_b.m
-│   ├── Fig_2_c.m
-│   ├── README.md
-│   └── data
-│       ├── FEandprofile.mat
-│       ├── Fuelec2.mat
-│       ├── UKandPoTRACCS2010.mat
-│       ├── krange_counts.mat
-│       └── vehiclesmatchedRanges.mat
-├── TPtrip.py
-├── TPtrip.pyc
-├── data
-│   ├── Alltrips_Github.pkl
-│   ├── DataFrame0_1_100pc_.csv
-│   ├── Riyadh_network_local.pkl
-│   ├── Riyadh_streets_FC_Figure3_alltimes.pkl
-│   ├── Riyadh_streets_FCcalculated_time1_targeted_reduction.pkl
-│   ├── Riyadh_trips_timestamps.csv
-│   ├── Trips_time1_100_github.pkl
-│   ├── flow_byEdge_time1.csv
-│   ├── flow_byEdge_time2.csv
-│   ├── flow_byEdge_time3_midday.csv
-│   ├── matchedSegmentsbyEdge_time1_8_9AM_weekdays_github.pkl
-│   ├── mx_Riyadh_streets_TAZ_ODs_0_1.pkl
-│   ├── riyadh_route_edges_am.txt
-│   └── streets_withtimes.pkl
-├── fuel_calc.py
-├── fuel_calc.pyc
-├── readcleansave_trips.py
-├── staycode.py
-├── staycode.pyc
-
-
