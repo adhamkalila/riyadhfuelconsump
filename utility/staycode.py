@@ -1,83 +1,23 @@
 
 # coding: utf-8
 
-# In[1]:
 
-from scipy.interpolate import interp1d
 import gzip
 import collections
 from collections import Counter
 import numpy as np
-import glob
-import datetime
 import timeit
-import sys
 import cPickle as pickle
-import scipy as sc
 import sys
-import pandas as pd
-import gc
-import csv
-from scipy import stats
-from collections import defaultdict
-from operator import itemgetter
-import itertools
-import networkx as nx
 import matplotlib
 matplotlib.use('TkAgg')
-from matplotlib import pyplot as plt
 from math import radians, cos, sin, asin, sqrt
-import seaborn as sns
-import math
-import community
-import operator
-from matplotlib import cm
-from scipy.sparse import lil_matrix
-# get_ipython().magic(u'matplotlib inline')
-import igraph
 from igraph import *
-import folium
-from folium import plugins
 
-SAVEDATA='/home/adham/osmnx/Taxipixi'
-DATAROOT='/home/adham/osmnx/Taxipixi'
 orginal_Stdout=sys.stdout
-
-# iniday=datetime.datetime(2015,1,1)
 AVG_EARTH_RADIUS = 6371  # in kmA
 
 
-# In[2]:
-
-def openpickle(filename):
-    start = timeit.default_timer()
-    if filename[-1:]=='z':
-        f=gzip.open(filename,'rb')
-    else:
-        f=open(filename,'r')
-
-    cosa=pickle.load(f)
-    f.close
-    stop = timeit.default_timer()
-    print 'APERTO file '+filename+' in time '+str(stop-start)
-    sys.stdout.flush()
-
-    return cosa
-
-
-def scrivipickle(filename,cosa):
-    start = timeit.default_timer()
-    if filename[-1:]=='z':
-        f=gzip.open(filename,'wb')
-    else:
-        f=open(filename,'w')
-    pickle.dump(cosa,f)
-    f.close
-    stop = timeit.default_timer()
-    print 'scritto file '+filename+' in time '+str(stop-start)
-    sys.stdout.flush()
-
-    return
 
 def haversine(point1, point2, miles=False):
     """ Calculate the great-circle distance bewteen two points on the Earth surface.
@@ -193,83 +133,3 @@ def stay(user1,par):
     record['stay_ind']=stay_ind
     record['stay_ind_list']=stay_ind_list
     return record
-
-
-# In[73]:
-
-# par=np.zeros([1,2])
-# par[0,0]=0.3
-# par[0,1]=900
-
-
-# In[320]:
-
-# with open("KenToy_2d.txt", 'r') as my_file:
-#     reader = csv.reader(my_file, delimiter=' ')
-#     my_list = list(reader)
-# n_list=[map(float,x) for x in my_list]
-# user1=np.array(n_list)
-
-
-# In[ ]:
-
-
-
-
-# In[146]:
-
-# stay_set[medoid_2d(stay_set)]
-
-
-# In[ ]:
-
-
-
-
-# In[321]:
-
-# r=stay(np.array(user1),par)
-# r['stays']
-
-
-# In[340]:
-
-# plt.plot(user1[:,1],user1[:,2])
-# stays_p=np.array([x[2] for x in r['stays']])
-
-# plt.scatter(stays_p[:,0],stays_p[:,1],color='r')
-
-
-# In[336]:
-
-# stays_p[:,2]
-
-
-# In[ ]:
-
-# stays(user1,par)
-
-
-# user1[0]
-
-# medoid_2d(stay_set)
-
-# XY=stay_set
-
-#
-
-# record['stays']
-
-# end_obs=j-1
-# d_t=flight[end_obs,0]-flight[start_obs,0]
-# stay_set=[xs[1:3] for xs in flight[start_obs:end_obs+1]]
-# stay_ind[start_obs:end_obs]=k
-#
-# flight[end_obs,0]
-
-# np.array(stay_set)
-
-# record['stays']
-#
-
-# In[ ]:

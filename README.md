@@ -1,6 +1,7 @@
 
-# Big Data Fusion to Estimate Urban Fuel Consumption:
-###  A case study of Riyadh
+# Big Data Fusion to Estimate Urban Fuel Consumption: A case study of Riyadh
+
+Paper Accepted for publication in Transportation Research Record 2018. Access it here in the meantime <https://arxiv.org/abs/1711.07550>
 
 ## **Purpose:**
 
