@@ -38,6 +38,7 @@ import igraph
 from igraph import *
 import folium
 from folium import plugins
+
 SAVEDATA='/home/adham/osmnx/Taxipixi'
 DATAROOT='/home/adham/osmnx/Taxipixi'
 orginal_Stdout=sys.stdout
@@ -140,7 +141,7 @@ def stay(user1,par):
 
     for m in range(len(par)):
         diam=par[m][0]
-        diam=0.3
+
         dur=par[m][1]
         stay_ind=np.zeros([maxt,1])
         stays=[]
